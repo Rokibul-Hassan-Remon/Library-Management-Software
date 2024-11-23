@@ -1,0 +1,17 @@
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareServices\bin\Debug\net8.0\LibraryManagementSoftwareServices.deps.json
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareServices\bin\Debug\net8.0\LibraryManagementSoftwareServices.dll
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareServices\bin\Debug\net8.0\LibraryManagementSoftwareServices.pdb
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareServices\bin\Debug\net8.0\LibraryManagementSoftwareModels.dll
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareServices\bin\Debug\net8.0\LibraryManagementSoftwareRepository.dll
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareServices\bin\Debug\net8.0\LibraryManagementSoftwareRepository.pdb
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareServices\bin\Debug\net8.0\LibraryManagementSoftwareModels.pdb
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareServices\obj\Debug\net8.0\LibraryManagementSoftwareServices.csproj.AssemblyReference.cache
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareServices\obj\Debug\net8.0\LibraryManagementSoftwareServices.GeneratedMSBuildEditorConfig.editorconfig
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareServices\obj\Debug\net8.0\LibraryManagementSoftwareServices.AssemblyInfoInputs.cache
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareServices\obj\Debug\net8.0\LibraryManagementSoftwareServices.AssemblyInfo.cs
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareServices\obj\Debug\net8.0\LibraryManagementSoftwareServices.csproj.CoreCompileInputs.cache
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareServices\obj\Debug\net8.0\LibraryM.4017E511.Up2Date
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareServices\obj\Debug\net8.0\LibraryManagementSoftwareServices.dll
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareServices\obj\Debug\net8.0\refint\LibraryManagementSoftwareServices.dll
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareServices\obj\Debug\net8.0\LibraryManagementSoftwareServices.pdb
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareServices\obj\Debug\net8.0\ref\LibraryManagementSoftwareServices.dll
