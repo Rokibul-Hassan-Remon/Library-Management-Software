@@ -1,0 +1,12 @@
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareModels\bin\Debug\net8.0\LibraryManagementSoftwareModels.deps.json
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareModels\bin\Debug\net8.0\LibraryManagementSoftwareModels.dll
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareModels\bin\Debug\net8.0\LibraryManagementSoftwareModels.pdb
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareModels\obj\Debug\net8.0\LibraryManagementSoftwareModels.GeneratedMSBuildEditorConfig.editorconfig
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareModels\obj\Debug\net8.0\LibraryManagementSoftwareModels.AssemblyInfoInputs.cache
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareModels\obj\Debug\net8.0\LibraryManagementSoftwareModels.AssemblyInfo.cs
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareModels\obj\Debug\net8.0\LibraryManagementSoftwareModels.csproj.CoreCompileInputs.cache
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareModels\obj\Debug\net8.0\LibraryManagementSoftwareModels.dll
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareModels\obj\Debug\net8.0\refint\LibraryManagementSoftwareModels.dll
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareModels\obj\Debug\net8.0\LibraryManagementSoftwareModels.pdb
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareModels\obj\Debug\net8.0\ref\LibraryManagementSoftwareModels.dll
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryManagementSoftwareModels\obj\Debug\net8.0\LibraryManagementSoftwareModels.csproj.AssemblyReference.cache
