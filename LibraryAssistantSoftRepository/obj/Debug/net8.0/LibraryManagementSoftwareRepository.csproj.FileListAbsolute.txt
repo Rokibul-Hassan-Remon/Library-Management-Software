@@ -1,0 +1,17 @@
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryAssistantSoftRepository\bin\Debug\net8.0\LibraryManagementSoftwareRepository.deps.json
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryAssistantSoftRepository\bin\Debug\net8.0\LibraryManagementSoftwareRepository.runtimeconfig.json
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryAssistantSoftRepository\bin\Debug\net8.0\LibraryManagementSoftwareRepository.dll
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryAssistantSoftRepository\bin\Debug\net8.0\LibraryManagementSoftwareRepository.pdb
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryAssistantSoftRepository\bin\Debug\net8.0\LibraryManagementSoftwareModels.dll
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryAssistantSoftRepository\bin\Debug\net8.0\LibraryManagementSoftwareModels.pdb
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryAssistantSoftRepository\obj\Debug\net8.0\LibraryManagementSoftwareRepository.csproj.AssemblyReference.cache
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryAssistantSoftRepository\obj\Debug\net8.0\LibraryManagementSoftwareRepository.GeneratedMSBuildEditorConfig.editorconfig
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryAssistantSoftRepository\obj\Debug\net8.0\LibraryManagementSoftwareRepository.AssemblyInfoInputs.cache
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryAssistantSoftRepository\obj\Debug\net8.0\LibraryManagementSoftwareRepository.AssemblyInfo.cs
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryAssistantSoftRepository\obj\Debug\net8.0\LibraryManagementSoftwareRepository.csproj.CoreCompileInputs.cache
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryAssistantSoftRepository\obj\Debug\net8.0\LibraryM.35BED95F.Up2Date
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryAssistantSoftRepository\obj\Debug\net8.0\LibraryManagementSoftwareRepository.dll
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryAssistantSoftRepository\obj\Debug\net8.0\refint\LibraryManagementSoftwareRepository.dll
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryAssistantSoftRepository\obj\Debug\net8.0\LibraryManagementSoftwareRepository.pdb
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryAssistantSoftRepository\obj\Debug\net8.0\LibraryManagementSoftwareRepository.genruntimeconfig.cache
+E:\Work Sample\ASP.NET\LibraryManagementAssistent\LibraryAssistantSoftRepository\obj\Debug\net8.0\ref\LibraryManagementSoftwareRepository.dll
