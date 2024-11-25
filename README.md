@@ -1,5 +1,6 @@
-# **Library Management Software**
 
+# **Library Management Software** 
+The **Library Management System**, built with **Clean Architecture** in **ASP.NET Core MVC**, ensures modularity and scalability through layered design. It automates library operations like book, loan, and user management while maintaining data integrity and security. The project combines a responsive UI with robust backend services for an efficient, modern solution.
 ### **Table of Contents**
 
 1. [Executive Summary](#executive-summary)
@@ -14,11 +15,12 @@
 10. [Conclusion](#conclusion)
 11. [Setup Guide](#setup-guide)
 
+
 ---
 
 ## **Executive Summary**
 
-The **Library Management Software** is a web-based application designed to streamline library operations by managing books, categories, loans, students, and staff efficiently. This software eliminates manual record-keeping by providing an automated solution with user-friendly interfaces and CRUD functionalities.
+The **Library Management Software** is a web-based application designed to streamline library operations by managing books, categories, loans, students, and staff efficiently. This software eliminates manual record-keeping by providing an automated solution with user-friendly interfaces and **CRUD** functionalities.
 
 ---
 
@@ -57,27 +59,23 @@ The system architecture is divided into four main components:
 ## **Database Design**
 
 The system uses a **Code-First Approach** in Entity Framework Core.
+### **Core Tables**:
 
-### **Tables:**
-
-1. **Registration Table:** Stores user email and password.
-2. **Login Table:** Validates user credentials.
-3. **Book Category Table:** Tracks book categories and details.
-4. **Book Table:** Stores book details, including author, price, and ISBN.
-5. **Book Loan Table:** Manages book loan information.
-6. **Staff Table:** Tracks staff details like position, salary, and experience.
-7. **Student Table:** Manages student information, including class and date of birth.
+1. **Users Table**: Stores user authentication details.
+2. **Books Table**: Contains book details such as title, author, and ISBN.
+3. **Categories Table**: Manages book categories.
+4. **Loans Table**: Tracks book loans and due dates.
+5. **Students Table**: Maintains student details like name and date of birth.
+6. **Staff Table**: Tracks staff information such as positions and salaries.
 
 ---
 
 ## **Functional Requirements**
-
-1. **User Registration:** Secure user registration with email and password validation.
-2. **User Login:** Authentication using stored credentials.
-3. **Book Management:** Add, edit, delete, and view books.
-4. **Category Management:** Manage book categories.
-5. **Loan Management:** Track loans, including due dates.
-6. **Staff and Student Management:** Manage staff and student details.
+1. **User Management**: Registration, login, and secure session handling.
+2. **Book Management:** Add, edit, delete, and view books.
+3. **Category Management:** Manage book categories.
+4. **Loan Management:** Track loans, including due dates.
+5. **Staff and Student Management:** Manage staff and student details.
 
 ---
 
@@ -86,7 +84,7 @@ The system uses a **Code-First Approach** in Entity Framework Core.
 1. **Registration Page:** User-friendly form for creating new accounts.
 2. **Login Page:** Secure login with options for registration.
 3. **Management Pages:**
-    - List views with CRUD options for books, categories, loans, staff, and students.
+    - List views with **CRUD** options for books, categories, loans, staff, and students.
 
 ---
 
@@ -97,6 +95,13 @@ The system uses a **Code-First Approach** in Entity Framework Core.
 - **Backend:** ASP.NET Core, Entity Framework Core.
 - **Frontend:** HTML, CSS, JavaScript, JQuery, Bootstrap.
 - **Database:** Microsoft SQL Server.
+
+---
+
+### **Architecture Highlights**
+
+- **Repository-Service Pattern**: Ensures separation of concerns.
+- **AutoMapper**: Simplifies object mapping between entities and DTOs.
 
 ---
 
@@ -159,52 +164,11 @@ Add the connection string in the `appsettings.json`:
 ```
 
 ---
+### **Step 4: Create Models**
 
-### **Step 4: Repository Project and DbContext**
+Define entity classes in the `Models` folder.
 
-- In **Solution Explorer**, right-click on your solution and select `Add > New Project`.
-    
-- Search for `Class Library` and name it `LibraryManageRepository`.
-    
-- Inside the repository project, create a folder named `DbConfigure` and add a `LibraryDBContext` class:
-```cs
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-
-public class LibraryDBContext : IdentityDbContext<ApplicationUser>
-{
-    public LibraryDBContext(DbContextOptions<LibraryDBContext> options) : base(options) { }
-
-    public DbSet<Book> Books { get; set; }
-    public DbSet<Student> Students { get; set; }
-}
-
-```
-
----
-### **Step 5: Configure Services in `Program.cs`**
-
-1. Open `Program.cs` and configure the `DbContext` service:
-
-```cs
-using Microsoft.EntityFrameworkCore;
-
-var builder = WebApplication.CreateBuilder(args);
-
-var conn = builder.Configuration.GetConnectionString("LibraryManagementSoft");
-builder.Services.AddDbContext<LibraryDBContext>(options => options.UseSqlServer(conn));
-
-// Other services...
-
-```
-
-
----
-### **Step 6: Create Models and Add DbSet**
-
-1. Create entity classes in the **Models** folder.
-2. Update the `LibraryDBContext` with the necessary `DbSet` properties.
-#### Example : 
+#### Example Model:
 ```cs
 public class Book
 {
@@ -219,19 +183,199 @@ public class Book
 
 ---
 
-### **Step 7: Run Migrations**
 
-Run the following commands in the **Package Manager Console**:
-```powershell
-Add-Migration InitialCreate  
-Update-Database  
+### **Step 5: Configure DbContext**
+
+Add a `LibraryDBContext` class in the `DbConfigure` folder of your repository project:
+```cs
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+
+public class LibraryDBContext : IdentityDbContext<ApplicationUser>
+{
+    public LibraryDBContext(DbContextOptions<LibraryDBContext> options) : base(options) { }
+
+    public DbSet<Book> Books { get; set; }
+    public DbSet<Student> Students { get; set; }
+}
 
 ```
 
-- This will create and apply the initial database schema.
 
 ---
 
+### **Step 6: Run Migrations**
+
+Run the following commands to create and update the database schema:
+```powershell
+Add-Migration InitialCreate  
+Update-Database
+
+
+```
+
+
+---
+
+### **Step 7: Add Repository Interface**
+
+Create an `ILibraryRepository` interface:
+```cs
+public interface ILibraryRepository
+{
+    Task<IEnumerable<Book>> GetAllBookAsync();
+    Task<Book> GetByIdAsync(int id);
+    Task AddAsync(Book entity);
+    Task UpdateAsync(Book entity);
+    Task DeleteAsync(int id);
+}
+
+```
+
+
+---
+
+### **Step 8: Implement Repository**
+
+Implement `ILibraryRepository` in the `LibraryRepository` class:
+```cs
+public class LibraryRepository : ILibraryRepository
+{
+    private readonly LibraryDBContext _context;
+
+    public LibraryRepository(LibraryDBContext context)
+    {
+        _context = context;
+    }
+
+    public async Task<IEnumerable<Book>> GetAllBookAsync()
+    {
+        return await _context.Books.ToListAsync();
+    }
+
+    public async Task<Book> GetByIdAsync(int id)
+    {
+        return await _context.Books.FindAsync(id);
+    }
+
+    public async Task AddAsync(Book entity)
+    {
+        _context.Books.Add(entity);
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task UpdateAsync(Book entity)
+    {
+        _context.Books.Update(entity);
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task DeleteAsync(int id)
+    {
+        var entity = await _context.Books.FindAsync(id);
+        if (entity != null)
+        {
+            _context.Books.Remove(entity);
+            await _context.SaveChangesAsync();
+        }
+    }
+}
+
+
+```
+
+
+---
+
+
+
+### **Step 9: Create Service Interface**
+
+Create an `ILibraryService` interface in the `LibraryManageService` project:
+```cs
+public interface ILibraryService
+{
+    Task<IEnumerable<Book>> GetAllBookAsync();
+    Task<BookVM> GetByIdAsync(int id);
+    Task AddAsync(Book entity);
+    Task UpdateAsync(Book entity);
+    Task DeleteAsync(int id);
+}
+
+```
+
+---
+
+### **Step 10: Implement Service**
+
+Implement `ILibraryService` in the `LibraryService` class:
+```cs
+public class LibraryService : ILibraryService
+{
+    private readonly ILibraryRepository _libraryRepository;
+    private readonly IMapper _mapper;
+
+    public LibraryService(ILibraryRepository libraryRepository, IMapper mapper)
+    {
+        _libraryRepository = libraryRepository;
+        _mapper = mapper;
+    }
+
+    public async Task<IEnumerable<Book>> GetAllBookAsync()
+    {
+        return await _libraryRepository.GetAllBookAsync();
+    }
+
+    public async Task<BookVM> GetByIdAsync(int id)
+    {
+        var book = await _libraryRepository.GetByIdAsync(id);
+        if (book == null) throw new Exception("No book found");
+        return _mapper.Map<BookVM>(book);
+    }
+
+    public async Task AddAsync(Book entity)
+    {
+        await _libraryRepository.AddAsync(entity);
+    }
+
+    public async Task UpdateAsync(Book entity)
+    {
+        await _libraryRepository.UpdateAsync(entity);
+    }
+
+    public async Task DeleteAsync(int id)
+    {
+        await _libraryRepository.DeleteAsync(id);
+    }
+}
+
+```
+
+
+---
+
+### **Step 11: Configure Dependencies in Program.cs**
+
+Add the following services in `Program.cs`:
+```cs
+builder.Services.AddDbContext<LibraryDBContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("LibraryManagementSoft")));
+
+builder.Services.AddScoped<ILibraryRepository, LibraryRepository>();
+builder.Services.AddScoped<ILibraryService, LibraryService>();
+
+```
+
+
+---
+
+### **Step 12: Add Project References**
+
+- Web Project: Add references to `LibraryManageService`, `LibraryManageModel`, and `LibraryManageRepository`.
+- Repository Project: Add a reference to `LibraryManageModel`.
+- Service Project: Add references to `LibraryManageModel` and `LibraryManageRepository`.
+
+---
 ## Testing & Deployment
 
 ### **Testing**
@@ -260,7 +404,8 @@ Update-Database
 This project is licensed under the MIT License.
 
 
-**Developed by:**  [Rokibul Hassan Remon](https://github.com/Rokibul-Hassan-Remon) & [Md. Jahidul Islam Rakib](https://github.com/Jahidul-islam-rakib)   
+**Developed by:** [Rokibul Hassan Remon](https://github.com/Rokibul-Hassan-Remon) & [Md. Jahidul Islam Rakib](https://github.com/Jahidul-islam-rakib)  
 **GitHub Repository:** [Library Management Software](#)
 
 Feel free to contribute and improve this project!
+
