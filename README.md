@@ -1,4 +1,3 @@
-# Library-Management-Software
 # **Library Management Software**
 
 ### **Table of Contents**
@@ -261,7 +260,7 @@ Update-Database
 This project is licensed under the MIT License.
 
 
-**Developed by:** [Rokibul Hassan Remon & Md. Jahidul Islam Rakib]  
+**Developed by:**  [Rokibul Hassan Remon](https://github.com/Rokibul-Hassan-Remon) & [Md. Jahidul Islam Rakib](https://github.com/Jahidul-islam-rakib)   
 **GitHub Repository:** [Library Management Software](#)
 
 Feel free to contribute and improve this project!
