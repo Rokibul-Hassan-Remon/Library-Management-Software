@@ -405,7 +405,7 @@ This project is licensed under the MIT License.
 
 
 **Redmi File Developed by:** [Rokibul Hassan Remon](https://github.com/Rokibul-Hassan-Remon) & [Md. Jahidul Islam Rakib](https://github.com/Jahidul-islam-rakib)  
-**Project Developed by:**[Rokibul Hassan Remon](https://github.com/Rokibul-Hassan-Remon)
+**Project Developed by:**[Rokibul Hassan Remon](https://github.com/Rokibul-Hassan-Remon)<br>
 **GitHub Repository:** [Library Management Software](#)
 
 Feel free to contribute and improve this project!
